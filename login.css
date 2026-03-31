@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(270deg, #ff416c, #ff4b2b, #1e90ff, #00c9a7);
+  background-size: 600% 600%;
+  animation: bgMove 10s infinite;
+}
+
+/* 🌈 Background animation */
+@keyframes bgMove {
+  0% {background-position: 0%;}
+  50% {background-position: 100%;}
+  100% {background-position: 0%;}
+}
+
+/* 🏍️ Moving Bike */
+.bike {
+  position: absolute;
+  bottom: 500px;
+  width: 200
+  px;
+  animation: moveBike 6s linear infinite;
+}
+
+@keyframes moveBike {
+  0% {
+    left: -250px;
+  }
+  100% {
+    left: 110%;
+  }
+}
+
+/* 🔐 Login Box */
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  width: 320px;
+  padding: 40px;
+
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+
+  box-shadow: 0 0 30px black;
+}
+
+/* ✨ Inputs */
+.input-box {
+  position: relative;
+  margin: 25px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  outline: none;
+}
+
+.input-box label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+/* Floating label */
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -15px;
+  font-size: 12px;
+  color: #00ffcc;
+}
+
+/* 🚀 Button */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: linear-gradient(45deg, #00ffcc, #1e90ff);
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Error */
+#error {
+  margin-top: 10px;
+  color: red;
+}
