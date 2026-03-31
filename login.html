@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bike Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🏍️ Moving Bike -->
+  <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/motorcycle-49278_1280.png" class="bike">
+
+  <!-- 🔐 Login Box -->
+  <div class="login-box">
+    <h2>🏍️ Rider Login</h2>
+
+    <div class="input-box">
+      <input type="text" id="user" required>
+      <label>Username</label>
+    </div>
+
+    <div class="input-box">
+      <input type="password" id="pass" required>
+      <label>Password</label>
+    </div>
+
+    <button onclick="login()">Login</button>
+    <p id="error"></p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
